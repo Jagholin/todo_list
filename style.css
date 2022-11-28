@@ -4,13 +4,34 @@
 }
 
 header {
+    width: 100%;
+    color: white;
+    background-color: black;
+    display: flow-root;
+}
 
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+    margin: 0.4em 1em;
+}
+
+header nav li {
+    color: white;
+    font-weight: bold;
 }
 
 main {
-
+    height: 100px;
 }
 
 footer {
-
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: .5em 1em;
 }
