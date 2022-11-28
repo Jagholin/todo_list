@@ -3,11 +3,31 @@
     box-sizing: border-box;
 }
 
+:root {
+    --header-background: black;
+    --header-color: white;
+    --header-link-hover: lightgrey;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+body > * {
+    flex: 0;
+}
+
 header {
     width: 100%;
-    color: white;
-    background-color: black;
+    color: var(--header-color);
+    background-color: var(--header-background);
     display: flow-root;
+    box-shadow: 0 0 10px 5px var(--header-background);
 }
 
 header nav ul {
@@ -19,18 +39,26 @@ header nav ul {
 }
 
 header nav li {
-    color: white;
+    color: var(--header-color);
     font-weight: bold;
 }
 
+header * {
+    color: inherit;
+}
+
+header a:hover {
+    color: var(--header-link-hover);
+}
+
 main {
-    height: 100px;
+    flex-grow: 1;
 }
 
 footer {
     width: 100%;
-    background-color: black;
-    color: white;
+    background-color: var(--header-background);
+    color: var(--header-color);
     display: flex;
     justify-content: space-between;
     padding: .5em 1em;
