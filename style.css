@@ -44,6 +44,21 @@ header nav li {
 }
 
 /*main {*/
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+.todo-list {
+    flex-grow: 1;
+    margin-top: 3em;
+    border: 1px solid black;
+}
+
+.todo-list li {
+    padding: 1em 1em;
+}
     
 .button {
     background-color: white;
