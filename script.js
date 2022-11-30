@@ -25,7 +25,7 @@ function addTask() {
     taskInput.value = "";
     document.getElementById('todo-list').appendChild(li);
 }
-btn_addTask.onclick = addTask;
+//btn_addTask.onclick = addTask;
 
 function editTask() {
 
@@ -35,6 +35,6 @@ function deleteTask() {
 
 }
 
-//btn_addTask.addEventListener("click", addTask);
+btn_addTask.addEventListener("click", addTask);
 btn_deleteTask.addEventListener("click", deleteTask);
 btn_editTask.addEventListener("click", editTask);

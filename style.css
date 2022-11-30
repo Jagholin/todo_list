@@ -9,6 +9,10 @@
     --header-link-hover: lightgrey;
 }
 
+.title {
+    text-align: center;
+    padding-bottom: 0.5em;
+}
 html, body {
     height: 100%;
 }
