@@ -17,9 +17,15 @@ for (const elem of startingElements) {
     })
 }
 
-function addTask() {
 
+function addTask() {
+    let li = document.createElement('li');
+    input = document.createTextNode(taskInput.value);
+    li.appendChild(input);
+    taskInput.value = "";
+    document.getElementById('todo-list').appendChild(li);
 }
+btn_addTask.onclick = addTask;
 
 function editTask() {
 
@@ -29,6 +35,6 @@ function deleteTask() {
 
 }
 
-btn_addTask.addEventListener("click", addTask);
+//btn_addTask.addEventListener("click", addTask);
 btn_deleteTask.addEventListener("click", deleteTask);
 btn_editTask.addEventListener("click", editTask);
