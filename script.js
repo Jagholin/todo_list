@@ -43,6 +43,7 @@ function editTask() {
 }
 
 function deleteTask() {
+    document.getElementById('todo-list').removeChild(chosenTodo);
 
 }
 
