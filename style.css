@@ -9,6 +9,10 @@
     --header-link-hover: lightgrey;
 }
 
+.title {
+    text-align: center;
+    padding-bottom: 0.5em;
+}
 html, body {
     height: 100%;
 }
@@ -80,6 +84,7 @@ main {
 .todo-list li.checked::before {
     content: "\f14a";
     font-family: "Font Awesome 6 Free";
+   
 }
 
 .column {

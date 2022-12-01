@@ -17,9 +17,21 @@ for (const elem of startingElements) {
     })
 }
 
-function addTask() {
 
+function addTask() {
+    let li = document.createElement('li');
+    input = document.createTextNode(taskInput.value);
+    li.appendChild(input);
+    taskInput.value = "";
+    document.getElementById('todo-list').appendChild(li);
 }
+//btn_addTask.onclick = addTask;
+document.querySelector('#task-input').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        document.addEventListener("keypress", addTask);
+        document.getElementById("#task-input").focus();
+    }
+});
 
 function editTask() {
 
