@@ -84,6 +84,7 @@ main {
 .todo-list li.checked::before {
     content: "\f14a";
     font-family: "Font Awesome 6 Free";
+   
 }
 
 .column {
