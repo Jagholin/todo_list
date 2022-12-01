@@ -28,12 +28,15 @@ function addTask() {
     li.appendChild(input);
     taskInput.value = "";
     document.getElementById('todo-list').appendChild(li);
+    document.getElementById("add-task").addEventListener("click", () => {
+        document.getElementById("task-input").focus();
+      });
 }
 
 //btn_addTask.onclick = addTask;
 document.querySelector('#task-input').addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
-        document.addEventListener("keypress", addTask);
+        addTask();
         document.getElementById("#task-input").focus();
     }
 });
