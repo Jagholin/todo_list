@@ -8,23 +8,28 @@ let chosenTodo = null;
 
 const startingElements = document.querySelectorAll("#todo-list li");
 
-for (const elem of startingElements) {
-    elem.addEventListener("click", (e) => {
-        chosenTodo?.classList.remove("selected");
-        chosenTodo = e.target;
-        chosenTodo.classList.add("selected");
-        console.log(chosenTodo)
-    })
+function onClick(e) {
+    chosenTodo?.classList.remove("selected");
+    chosenTodo = e.target;
+    chosenTodo.classList.add("selected");
+    console.log(chosenTodo)
+
 }
 
+for (const elem of startingElements) {
+    elem.addEventListener("click", onClick)
+}
 
 function addTask() {
     let li = document.createElement('li');
-    input = document.createTextNode(taskInput.value);
+    li.addEventListener("click", onClick);
+    li.classList.add("unchecked");
+    let input = document.createTextNode(" " + taskInput.value);
     li.appendChild(input);
     taskInput.value = "";
     document.getElementById('todo-list').appendChild(li);
 }
+
 //btn_addTask.onclick = addTask;
 document.querySelector('#task-input').addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
