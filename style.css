@@ -72,6 +72,7 @@ main {
     border-radius: 12px;
     border: 2px solid black;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    overflow: hidden;
 }
 
 .todo-list li {
@@ -82,13 +83,14 @@ main {
 
 .todo-list li.unchecked::before {
     content: "\f0c8";
-    font-family: "Font Awesome 6 Free";   
+    font-family: "Font Awesome 6 Free";
+    font-size: 1.3em;
 }
 
 .todo-list li.checked::before {
     content: "\f14a";
     font-family: "Font Awesome 6 Free";
-   
+    font-size: 1.3em;
 }
 
 .column {
