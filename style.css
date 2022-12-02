@@ -57,9 +57,9 @@ main {
 }
 
 .todo-list {
+    width: 500px;
     flex-grow: 1;
     margin-top: 3em;
-    border: 1px solid black;
 }
 
 .todo-list li {
@@ -69,6 +69,9 @@ main {
 
 .todo-list ul {
     background-color: ivory;
+    border-radius: 12px;
+    border: 2px solid black;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .todo-list li {
